@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+.popup {
+  display: block;
+  /* display none을 줄 예정 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  min-height: 200px;
+  /* 안의 요소에 따라 길이가 달라지므로 고정값을 주지 않고 최소 값만 지정 */
+  background-color: #aaa;
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 10;
+  /* 맨 위에 올라와야 하므로 z-index는 큰 값을 주도록 한다. */
+}
+
+.popup h1 {
+  font-size: 20px;
+  color: #333;
+}
+
+.popup p {
+  margin: 10px 0;
+  padding-bottom: 20px;
+}
+
+.popup button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  outline: none;
+  /* 버튼 태그를 사용하게 되면 우리가 주지 않은 보더가 생기는데 그 보더를 지우는것. outline은 안적어줘도 된다. 생길때가 있고 안생길때가 있어서. */
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #d1d1d1;
+  cursor: pointer;
+  /* 접근성, 반드시 적어주도록 하자 */
+}
+
+#notice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#notice ul {
+  width: 500px;
+  padding: 40px;
+  border: 1px solid #000;
+}
+
+#notice ul li {
+  list-style: none;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
